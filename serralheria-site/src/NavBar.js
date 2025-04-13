@@ -16,7 +16,7 @@ function NavBar() {
         <div className="hidden md:flex space-x-8">
           <Link to="/" className="hover:underline">Início</Link>
           <Link to="/portfolio" className="hover:underline">Portfólio</Link>
-          <Link to="/contato" className="hover:underline">Contato</Link>
+          <Link to="/form" className="block text-white hover:underline">Orçamento</Link>
         </div>
 
         {/* Menu hamburguer para telas pequenas */}
@@ -32,7 +32,7 @@ function NavBar() {
       <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} bg-blue-800 p-4`}>
         <Link to="/" className="block text-white py-2 hover:underline">Início</Link>
         <Link to="/portfolio" className="block text-white py-2 hover:underline">Portfólio</Link>
-        <Link to="/contato" className="block text-white py-2 hover:underline">Contato</Link>
+        <Link to="/form" className="block text-white py-2 hover:underline">Orçamento</Link>
       </div>
     </nav>
   );

@@ -9,12 +9,9 @@ function App() {
     <Router>
       <NavBar />
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/form" element={<Form />} />
         <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/" element={<Home/>} />
-
-        {/* Outras rotas podem ser adicionadas assim: */}
-        {/* <Route path="/contato" element={<Contato />} /> */}
       </Routes>
     </Router>
   );

@@ -36,39 +36,50 @@ const Form = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        placeholder="Seu Nome"
-        required
-      />
-      <input
-        type="email"
-        name="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Seu E-mail"
-        required
-      />
-      <input
-        type="text"
-        name="locality"
-        value={locality}
-        onChange={(e) => setLocality(e.target.value)}
-        placeholder="Sua Localidade"
-      />
-      <textarea
-        name="message"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        placeholder="Sua Mensagem"
-        required
-      />
-      <button type="submit">Enviar</button>
-    </form>
+    <div className="mt-20 px-4 py-6 max-w-lg mx-auto">
+      <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-lg">
+        <input
+          type="text"
+          name="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Seu Nome"
+          required
+          className="w-full mb-4 p-3 border border-gray-300 rounded-lg"
+        />
+        <input
+          type="email"
+          name="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Seu E-mail"
+          required
+          className="w-full mb-4 p-3 border border-gray-300 rounded-lg"
+        />
+        <input
+          type="text"
+          name="locality"
+          value={locality}
+          onChange={(e) => setLocality(e.target.value)}
+          placeholder="Sua Localidade"
+          className="w-full mb-4 p-3 border border-gray-300 rounded-lg"
+        />
+        <textarea
+          name="message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          placeholder="Sua Mensagem"
+          required
+          className="w-full mb-4 p-3 border border-gray-300 rounded-lg"
+        />
+        <button
+          type="submit"
+          className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700"
+        >
+          Enviar
+        </button>
+      </form>
+    </div>
   );
 };
 

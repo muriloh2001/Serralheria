@@ -21,19 +21,11 @@ function Home() {
 
   return (
     <div className="min-h-screen bg-gray-100 text-gray-800 font-sans">
-      <header className="bg-blue-700 text-white p-6 text-center">
-        <h1 className="text-3xl font-bold">Serralheria do João</h1>
-        <p className="mt-2">Transformando ferro em arte!</p>
-      </header>
+
 
       <main className="p-0">
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Nossos Serviços</h2>
-          <p>Trabalhamos com portões, grades, estruturas metálicas e muito mais.</p>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Galeria de Trabalhos</h2>
+         
           <div className="relative w-full h-[60vh] overflow-hidden">
             {/* Carrossel de imagens */}
             <img
@@ -51,6 +43,20 @@ function Home() {
               ))}
             </div>
           </div>
+          <div className="mt-4 text-center">
+            <p className="italic text-gray-700">Confira alguns dos nossos trabalhos anteriores.</p>
+          </div>
+
+          <section className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">Nossos Serviços</h2>
+          <p>Trabalhamos com portões, grades, estruturas metálicas e muito mais.</p>
+          <div className="mt-4 space-y-2">
+            <p><strong>Portões de Ferro:</strong> Segurança e durabilidade para sua casa.</p>
+            <p><strong>Grades Decorativas:</strong> Design personalizado para ambientes sofisticados.</p>
+            <p><strong>Estruturas Metálicas:</strong> Projetos robustos para qualquer necessidade.</p>
+          </div>
+        </section>
+        
         </section>
 
         <section>

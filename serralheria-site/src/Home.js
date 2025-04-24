@@ -35,10 +35,11 @@ function Home() {
     if (!container) return;
 
     const scrollInterval = setInterval(() => {
+      const scrollAmount = 1050; // 4 imagens + 3 espaços
       if (container.scrollLeft + container.offsetWidth >= container.scrollWidth) {
         container.scrollTo({ left: 0, behavior: 'smooth' });
       } else {
-        container.scrollBy({ left: 360, behavior: 'smooth' });
+        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
       }
     }, 2500);
 
@@ -83,9 +84,9 @@ function Home() {
 
     {/* Texto com fonte maior */}
     <div className="w-1/3">
-      <h3 className="text-2xl font-semibold border-b-2 border-gray-800 inline-block mb-4">Sobre nós</h3>
-      <h2 className="text-4xl font-bold text-gray-800 mb-6 leading-tight">Experiência e qualidade nos serviços</h2>
-      <div className="text-gray-700 text-lg leading-relaxed mb-6">
+      <h3 className="text-5xl font-semibold border-b-2 border-gray-900 inline-block mb-10">Sobre nós</h3>
+      <h2 className="text-6xl font-bold text-gray-800 mb-10 leading-tight">Experiência e qualidade nos serviços</h2>
+      <div className="text-gray-700 text-[2.3rem] leading-relaxed mb-10">
         <p>
           Atuamos desde 1999, na área de serralheria residencial e industrial. Tudo em ferro, aço inox e aço cortén.
           Faz parte de nossa linha de produção: Corrimão, Guarda-corpo, Grade, Portão, Aço Cortén, Mezanino, Muro
@@ -94,7 +95,7 @@ function Home() {
       </div>
       <a
         href="https://www.ironart.com.br/sobre-nos/"
-        className="inline-block bg-black text-white text-base py-3 px-6 rounded hover:bg-gray-800 transition"
+        className="inline-block bg-black text-white text-base text-[1.4rem] py-4 px-7 rounded hover:bg-gray-800 transition"
       >
         Conheça mais
       </a>
@@ -125,25 +126,30 @@ function Home() {
     </a>
   </div>
 </section>
-
-        {/* Carrossel menor com scroll automático */}
-        <section className="mb-10 px-10">
-        <h4 className="text-4xl font-semibold mb-10">Nossos Serviços</h4>
-          <div
-            ref={scrollContainerRef}
-            className="flex space-x-6 overflow-x-auto scroll-smooth pb-6 no-scrollbar"
-          >
-            {trabalhos.map((imgUrl, index) => (
-              <img
-                key={index}
-                src={imgUrl}
-                alt={`Imagem de trabalho de serralheria número ${index + 1}`}
-                className="w-[80vw] max-w-[500px] h-[300px] sm:h-[400px] object-cover flex-shrink-0 rounded-lg shadow-lg"
-                loading="lazy"
-              />
-            ))}
+          <div className="w-full md:w-6/12 pb-2 py-[10rem] pb-[3rem] px-[6.5rem] text-justify">
+            <h3 className="text-4xl font-bold border-b-2 border-gray-300 inline-block mb-10">Serviços</h3>
+            <h2 className="text-[4rem] text-gray-900">Trabalhamos com diversos produtos em Ferro e Aço Inox de alta qualidade</h2>
           </div>
-        </section>
+      <div className="py-20">
+            {/* Carrossel menor com scroll automático */}
+            <section className="mb-10 px-[6.5rem]">
+            <h4 className="text-4xl font-semibold mb-10">Serviços Efetuados</h4>
+              <div
+                ref={scrollContainerRef}
+                className="flex space-x-6 overflow-x-auto scroll-smooth pb-24 no-scrollbar"
+              >
+                {trabalhos.map((imgUrl, index) => (
+                  <img
+                    key={index}
+                    src={imgUrl}
+                    alt={`Imagem de trabalho de serralheria número ${index + 1}`}
+                    className="w-[80vw] max-w-[500px] h-[450px] sm:h-[500px] object-cover flex-shrink-0 rounded-lg shadow-lg"
+                    loading="lazy"
+                  />
+                ))}
+              </div>
+            </section>
+        </div>
 
         {/* Contato */}
         <section className="mb-12 px-4">

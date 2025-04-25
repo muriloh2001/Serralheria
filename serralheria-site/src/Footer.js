@@ -57,7 +57,7 @@ function Footer() {
           <div className="w-full md:w-1/3 flex justify-center my-2 md:my-0">
             <a href="https://www.cgdw.com.br" target="_blank" rel="noreferrer">
               <img
-                src="https://www.ironart.com.br/views/geral/img/svg/site_cgdw.svg"
+                src=""
                 alt="CGDW"
                 className="h-8"
               />

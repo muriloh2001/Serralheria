@@ -8,7 +8,7 @@ function NavBar() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <nav className="bg-blue-800 text-white shadow-md fixed w-full z-50 top-0 left-0">
+    <nav className="bg-blue-800/85 text-white shadow-md fixed w-full z-50 top-0 left-0 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-6 flex justify-between items-center">
         <span className="text-3xl md:text-5xl font-bold">Serralheria do João</span>
 

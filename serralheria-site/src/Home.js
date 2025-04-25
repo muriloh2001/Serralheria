@@ -151,11 +151,74 @@ function Home() {
             </section>
         </div>
 
-        {/* Contato */}
-        <section className="mb-12 px-4">
-          <h2 className="text-2xl font-semibold mb-4">Contato</h2>
-          <p>Entre em contato clicando no botão flutuante no canto inferior direito.</p>
-        </section>
+
+        <div class="max-w-1xl mx-auto px-[6.5rem] ">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch min-h-[900px] ">
+    
+    <div class="h-full w-full ">
+      <iframe
+        loading="lazy"
+        src="https://maps.google.com/maps?q=Rua%20Ernesto%20Germano%20Francisco%20Hannemam%20N%C2%B0%2031%20-%20Tatuquara%20-%20Curitiba%20%E2%80%93%20PR&t=h&z=18&output=embed"
+        title="Rua Ernesto Germano Francisco Hannemam"
+        class="w-full h-full rounded-xl shadow-lg "
+        allowfullscreen
+        aria-hidden="false"
+      ></iframe>
+      
+    </div>
+
+    
+    <div class="h-full bg-white p-8 rounded-xl shadow-lg flex flex-col justify-between">
+      <div>
+        <h3 class="text-[1.6rem] font-semibold text-gray-800">Entre em Contato Agora</h3>
+        <h2 class="text-4xl font-bold text-blue-600 mb-6">Agende sua Consulta para Soluções Sob Medida</h2>
+
+        <form class="space-y-4 text-[1.5rem]">
+          <div>
+            <input type="text" id="nome" name="nome" placeholder="Nome"
+              class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          </div>
+
+          <div>
+            <input type="tel" id="telefone" name="telefone" placeholder="Telefone"
+              pattern="[0-9()#&amp;+*-=.]+" required
+              class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          </div>
+
+          <div>
+            <input type="email" id="email" name="email" placeholder="Email"
+              required
+              class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          </div>
+
+          <div>
+            <select id="servico" name="servico" required
+              class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option value="">Selecione um serviço</option>
+              <option value="Grades de proteção">Grades de proteção</option>
+              <option value="Portões basculantes">Portões basculantes</option>
+              <option value="Portas de aço">Portas de aço</option>
+              <option value="Grades pantográficas">Grades pantográficas</option>
+              <option value="Portões">Portões</option>
+              <option value="Consertos e soldas em geral">Consertos e soldas em geral</option>
+              <option value="Estruturas metálicas">Estruturas metálicas</option>
+            </select>
+          </div>
+
+          <div>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Mensagem"
+              class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+          </div>
+
+          <button type="submit"
+            class="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition">
+            Enviar Mensagem
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
       </main>
 
       {/* WhatsApp flutuante */}

@@ -4,6 +4,7 @@ import Form from './Form';
 import Home from './Home';
 import NavBar from './NavBar';
 import Footer from './Footer';
+import WhatsAppPopup from './WhatsAppPopup';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/form" element={<Form />} />
         <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
+      <WhatsAppPopup/>
       <Footer/>
     </Router>
   );

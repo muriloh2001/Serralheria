@@ -8,12 +8,12 @@ function NavBar() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <nav className="bg-blue-800/85 text-white shadow-md fixed w-full z-50 top-0 left-0 backdrop-blur-sm">
+    <nav className="bg-blue-800/15 text-white shadow-md fixed w-full z-50 top-0 left-0 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 md:px-6 py-11 flex justify-between items-center">
-        <span className="text-3xl md:text-5xl font-bold">Serralheria do João</span>
+        <span className="text-2xl md:text-4xl font-bold">Serralheria do João</span>
 
         {/* Menu para telas grandes */}
-        <div className="hidden md:flex space-x-10 text-[1.5rem] items-center">
+        <div className="hidden md:flex space-x-10 text-[1.1rem] items-center">
           <Link to="/" className="hover:underline flex items-center gap-2">
             <Home size={22} /> Início
           </Link>

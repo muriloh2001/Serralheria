@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
-import BannerImage from './assets/teste5.jpg';
+import BannerImage from '../assets/teste5.jpg';
 import { FaPaperPlane } from 'react-icons/fa';
 
 const Form = () => {
@@ -55,7 +55,7 @@ const Form = () => {
           onSubmit={handleSubmit}
           className="bg-white/10 backdrop-blur-md p-10 rounded-3xl shadow-2xl w-full max-w-[800px] space-y-6 border border-white/20"
         >
-          <h1 className="text-4xl font-bold text-center text-white drop-shadow mb-6">
+          <h1 className="text-3xl font-bold text-center text-white drop-shadow mb-6">
             Solicite seu Orçamento
           </h1>
 

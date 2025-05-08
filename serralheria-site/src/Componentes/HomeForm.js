@@ -40,7 +40,7 @@ function HomeForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="pt-6 space-y-4 text-[1.3rem]">
+    <form onSubmit={handleSubmit} className="pt-6 space-y-4 text-[1rem]">
       <input
         type="text"
         name="name"

@@ -51,15 +51,16 @@ const Form = () => {
 
       {/* conteúdo centralizado */}
       <div className="relative z-10 flex items-center justify-center h-full px-4">
-        <form
-          onSubmit={handleSubmit}
-          className="bg-white/10 backdrop-blur-md p-10 rounded-3xl shadow-2xl w-full max-w-[800px] space-y-6 border border-white/20"
-        >
-          <h1 className="text-3xl font-bold text-center text-white drop-shadow mb-6">
+      <form
+  onSubmit={handleSubmit}
+  className="bg-white/10 backdrop-blur-md p-6 md:p-10 rounded-3xl shadow-2xl w-full max-w-[500px] space-y-6 border border-white/20"
+>
+
+          <h1 className="text-2xl md:text-3xl font-bold text-center text-white drop-shadow mb-6">
             Solicite seu Orçamento
           </h1>
 
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <input
               type="text"
               name="name"
@@ -136,7 +137,7 @@ const Form = () => {
       <style jsx="true">{`
         .input-styled {
           width: 100%;
-          padding: 0.75rem 1rem;
+          padding: 0.50rem 1rem;
           border-radius: 0.75rem;
           border: 1px solid #ccc;
           background-color: rgba(255, 255, 255, 0.8);

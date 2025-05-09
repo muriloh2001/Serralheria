@@ -132,56 +132,94 @@ function Home() {
     </a>
   </div>
 </section>
-          <div className="w-full md:w-6/12 pb-2 py-[4rem] pb-[3rem] px-[6.5rem] text-justify">
-            <h3 className="text-3xl font-semibold border-b-2 border-gray-900 inline-block mb-10">Serviços</h3>
-            <h2 className="text-4xl font-bold text-gray-800 mb-10 leading-tight">Trabalhamos com diversos produtos em Ferro e Aço Inox de alta qualidade</h2>
-          </div>
-      <div className="mb-10">
-            {/* Carrossel menor com scroll automático */}
-            <section className="mb-10 px-[7.5rem]">
-            <h4 className="text-4xl font-semibold mb-6">Serviços Efetuados</h4>
-              <div
-                ref={scrollContainerRef}
-                className="flex space-x-6 overflow-x-auto scroll-smooth pb-24 no-scrollbar"
-              >
-                {trabalhos.map((imgUrl, index) => (
-                  <img
-                  key={index}
-                  src={imgUrl}
-                  alt={`Imagem de trabalho de serralheria número ${index + 1}`}
-                  className="w-[450px] h-[400px] rounded-lg shadow-md object-cover flex-shrink-0"
-                />
-                
-                ))}
-              </div>
-            </section>
-        </div>
+
+          
+          {/* Versão Desktop */}
+<div className="hidden md:block w-full md:w-6/12 pb-2 py-[4rem] pb-[3rem] px-[6.5rem] text-justify">
+  <h3 className="text-3xl font-semibold border-b-2 border-gray-900 inline-block mb-10">Serviços</h3>
+  <h2 className="text-4xl font-bold text-gray-800 mb-10 leading-tight">
+    Trabalhamos com diversos produtos em Ferro e Aço Inox de alta qualidade
+  </h2>
+</div>
+
+<div className="hidden md:block mb-10">
+  {/* Carrossel menor com scroll automático */}
+  <section className="mb-10 px-[7.5rem]">
+    <h4 className="text-4xl font-semibold mb-6">Serviços Efetuados</h4>
+    <div
+      ref={scrollContainerRef}
+      className="flex space-x-6 overflow-x-auto scroll-smooth pb-24 no-scrollbar"
+    >
+      {trabalhos.map((imgUrl, index) => (
+        <img
+          key={index}
+          src={imgUrl}
+          alt={`Imagem de trabalho de serralheria número ${index + 1}`}
+          className="w-[450px] h-[400px] rounded-lg shadow-md object-cover flex-shrink-0"
+        />
+      ))}
+    </div>
+  </section>
+</div>
+
+{/* Versão Mobile */}
+<div className="block md:hidden w-full md:w-6/12 py-16 px-6 md:px-24 text-justify">
+  <h3 className="text-2xl md:text-3xl font-semibold border-b-2 border-gray-900 inline-block mb-6 md:mb-10">
+    Serviços
+  </h3>
+  <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 md:mb-10 leading-tight">
+    Trabalhamos com diversos produtos em Ferro e Aço Inox de alta qualidade
+  </h2>
+</div>
+
+<div className="block md:hidden mb-10">
+  {/* Carrossel menor com scroll automático */}
+  <section className="px-4 sm:px-6 md:px-24 mb-10">
+    <h4 className="text-2xl md:text-4xl font-semibold mb-6">Serviços Efetuados</h4>
+    <div
+      ref={scrollContainerRef}
+      className="flex space-x-4 sm:space-x-6 overflow-x-auto scroll-smooth pb-10 sm:pb-24 no-scrollbar"
+    >
+      {trabalhos.map((imgUrl, index) => (
+        <img
+          key={index}
+          src={imgUrl}
+          alt={`Imagem de trabalho de serralheria número ${index + 1}`}
+          className="w-[250px] h-[200px] sm:w-[350px] sm:h-[300px] md:w-[450px] md:h-[400px] rounded-lg shadow-md object-cover flex-shrink-0"
+        />
+      ))}
+    </div>
+  </section>
+</div>
 
 
-        <div class="max-w-1xl mx-auto px-[6.5rem] ">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch min-h-[900px] ">
+
+
+<div className="max-w-1xl mx-auto px-4 md:px-[6.5rem]">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch min-h-[900px]">
     
-    <div class="h-full w-full ">
+    {/* Mapa */}
+    <div className="h-full w-full">
       <iframe
         loading="lazy"
         src="https://maps.google.com/maps?q=Rua%20Ernesto%20Germano%20Francisco%20Hannemam%20N%C2%B0%2031%20-%20Tatuquara%20-%20Curitiba%20%E2%80%93%20PR&t=h&z=18&output=embed"
         title="Rua Ernesto Germano Francisco Hannemam"
-        class="w-full h-full rounded-xl shadow-lg "
+        className="w-full h-full rounded-xl shadow-lg"
         allowfullscreen
         aria-hidden="false"
       ></iframe>
-      
     </div>
 
-    
-    <div class="h-full bg-white p-10 rounded-xl shadow-lg flex flex-col justify-start">
-        <h3 class="text-[1.4rem] font-semibold text-gray-800 pt-[3rem]">Entre em Contato Agora</h3>
-        <h2 class="text-3xl font-bold text-blue-600 pt-[1rem] pb-[3rem]">Agende sua Consulta para Soluções Sob Medida</h2>
-      
-        <HomeForm className="mt-0 pb-0 max-w-full" />
+    {/* Formulário de Contato */}
+    <div className="h-full bg-white p-10 rounded-xl shadow-lg flex flex-col justify-start">
+      <h3 className="text-[1.4rem] font-semibold text-gray-800 pt-[3rem]">Entre em Contato Agora</h3>
+      <h2 className="text-3xl font-bold text-blue-600 pt-[1rem] pb-[3rem]">Agende sua Consulta para Soluções Sob Medida</h2>
+      <HomeForm className="mt-0 pb-0 max-w-full" />
     </div>
+
   </div>
 </div>
+
       </main>
     </div>
   );

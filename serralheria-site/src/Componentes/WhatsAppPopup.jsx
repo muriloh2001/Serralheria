@@ -14,8 +14,8 @@ export default function WhatsAppPopup() {
         >
           <FaWhatsapp size={28} />
           <div className="text-left leading-6">
-            <div className="font-semibold text-[1.1rem]">Fale Conosco</div>
-            <div className=" text-[1rem]">Chamar no WhatsApp</div>
+            <div className="font-semibold text-[1rem]">Fale Conosco</div>
+            <div className=" text-[0.90rem]">Chamar no WhatsApp</div>
           </div>
         </button>
       )}

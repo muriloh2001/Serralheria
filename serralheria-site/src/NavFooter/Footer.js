@@ -2,96 +2,70 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer className="bg-white text-gray-800 pt-10 pb-6 border-t">
+    <footer className="bg-[#6c6f71] text-white pt-10 pb-6">
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap justify-between pb-12">
+        <div className="flex flex-wrap justify-between pb-8 gap-6">
 
           {/* Logo */}
-          <div className="w-full md:w-1/2 lg:w-1/4 px-4 mb-6 text-center md:text-left">
+          <div className="w-full md:w-1/2 lg:w-1/4 text-center md:text-left">
             <img
-              className="max-w-[180px] mx-auto md:mx-0"
+              className="max-w-[160px] mx-auto md:mx-0 mb-2"
               src="https://www.ironart.com.br/views/geral/img/logo-rodape.png"
               alt="Logo IronArt"
             />
+            <p className="text-sm text-gray-200">Excelência em estruturas metálicas desde 2006.</p>
           </div>
 
           {/* Contato */}
-          <div className="w-full md:w-1/2 lg:w-1/5 px-4 mb-6">
-            <h4 className="text-lg font-semibold uppercase mb-3">Fale Conosco</h4>
-            <ul className="space-y-1 text-sm">
-              <li>(41) 3274-3554</li>
-              <li>(41) 98417-6949</li>
-              <li>contato@ironart.com.br</li>
+          <div className="w-full md:w-1/2 lg:w-1/5">
+            <h4 className="text-base font-semibold uppercase mb-3">Contato</h4>
+            <ul className="space-y-2 text-sm text-gray-100">
+              <li><i className="fa fa-phone mr-2" /> (41) 3274-3554</li>
+              <li><i className="fa fa-mobile mr-2" /> (41) 98417-6949</li>
+              <li><i className="fa fa-envelope mr-2" /> contato@ironart.com.br</li>
             </ul>
           </div>
 
           {/* Endereço */}
-          <div className="w-full md:w-1/2 lg:w-1/4 px-4 mb-6">
-            <h4 className="text-lg font-semibold uppercase mb-3">Onde Estamos</h4>
-            <p className="text-sm">
-              Av. Nossa Senhora Aparecida, 1865<br />
-              Seminário, Curitiba - PR
+          <div className="w-full md:w-1/2 lg:w-1/4">
+            <h4 className="text-base font-semibold uppercase mb-3">Endereço</h4>
+            <p className="text-sm text-gray-100 leading-6">
+              R. José Carreiro Lima, 315<br />
+              Planta Wagner, Piraquara - PR<br />
+              83314-330
             </p>
             <a
-              href="https://goo.gl/maps/1sF3Upaz5HXL8fXU7"
+              href="https://maps.google.com/maps?q=Rua%20José%20Carreiro%20Lima%20N%C2%B0%20315%20-%20Piraquara%20-%20Curitiba%20%E2%80%93%20PR&t=h&z=18"
               target="_blank"
               rel="noreferrer"
-              className="text-blue-600 hover:underline mt-2 inline-block text-sm"
+              className="text-sm text-white underline mt-2 inline-block hover:text-gray-300"
             >
-              Veja como chegar
+              Ver no mapa
             </a>
           </div>
 
-          {/* Horário */}
-          <div className="w-full md:w-1/2 lg:w-1/4 px-4 mb-6">
-            <h4 className="text-lg font-semibold uppercase mb-3">Horário de Atendimento</h4>
-            <p className="text-sm">Segunda a Sexta-feira<br />das 8h às 18h</p>
-          </div>
-
           {/* Redes Sociais */}
-          <div className="w-full md:w-1/2 lg:w-1/6 px-4 mb-6">
-            <h4 className="text-lg font-semibold uppercase mb-3">Acompanhe</h4>
-            <div className="flex space-x-4">
-              <a
-                href="https://www.facebook.com/serralheriaironart"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Facebook"
-              >
-                <i className="fa fa-facebook text-2xl text-blue-700 hover:text-blue-900"></i>
+          <div className="w-full md:w-1/2 lg:w-1/6">
+            <h4 className="text-base font-semibold uppercase mb-3">Redes Sociais</h4>
+            <div className="flex space-x-4 mt-2">
+              <a href="https://www.facebook.com/serralheriaironart" target="_blank" rel="noreferrer" aria-label="Facebook">
+                <i className="fa fa-facebook-square text-2xl hover:text-blue-300" />
               </a>
-              <a
-                href="https://www.instagram.com/metalurgica_iron_art/"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Instagram"
-              >
-                <i className="fa fa-instagram text-2xl text-pink-500 hover:text-pink-700"></i>
+              <a href="https://www.instagram.com/metalurgica_iron_art/" target="_blank" rel="noreferrer" aria-label="Instagram">
+                <i className="fa fa-instagram text-2xl hover:text-pink-300" />
               </a>
             </div>
           </div>
         </div>
 
         {/* Rodapé inferior */}
-        <div className="flex flex-wrap items-center border-t pt-4 text-sm text-center md:text-left">
-          <div className="w-full md:w-1/3 mb-2 md:mb-0">
-            © {new Date().getFullYear()} Ironart. Todos os direitos reservados.
+        <div className="border-t border-gray-400 pt-4 text-sm text-gray-100 flex flex-wrap justify-between items-center">
+          <div className="w-full md:w-1/2 text-center md:text-left mb-2 md:mb-0">
+            © {new Date().getFullYear()} IronArt. Todos os direitos reservados.
           </div>
-
-          <div className="w-full md:w-1/3 flex justify-center mb-2 md:mb-0">
-            <a href="https://www.cgdw.com.br" target="_blank" rel="noreferrer" aria-label="Desenvolvido por CGDW">
-              {/* Adicione o logo aqui, se houver */}
-              <img src="" alt="CGDW" className="h-8" />
-            </a>
-          </div>
-
-          <div className="w-full md:w-1/3 md:text-right">
-            <a href="#topo" aria-label="Voltar ao topo">
-              <img
-                src="https://www.ironart.com.br/views/geral/img/svg/seta.svg"
-                alt="Voltar ao topo"
-                className="inline h-6"
-              />
+          <div className="w-full md:w-1/2 text-center md:text-right">
+            <a href="#topo" aria-label="Voltar ao topo" className="hover:text-white">
+              <i className="fa fa-arrow-up mr-1" /> Voltar ao topo
             </a>
           </div>
         </div>
